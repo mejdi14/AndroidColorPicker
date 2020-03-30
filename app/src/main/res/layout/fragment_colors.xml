@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:tag="layout/color_picker_page_fragment_0">
+
+    <ImageView
+        android:id="@+id/color1"
+        android:layout_width="@dimen/color_picker_swatch_size"
+        android:layout_height="@dimen/color_picker_swatch_size"
+        android:layout_margin="@dimen/color_picker_swatch_spacing"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toTopOf="@+id/color4"
+        app:layout_constraintEnd_toStartOf="@+id/color2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/color2"
+        android:layout_width="@dimen/color_picker_swatch_size"
+        android:layout_height="@dimen/color_picker_swatch_size"
+        android:layout_margin="@dimen/color_picker_swatch_spacing"
+        android:contentDescription="@null"
+        android:src="@drawable/color_item_swatch_background"
+        app:layout_constraintBottom_toTopOf="@+id/color5"
+        app:layout_constraintEnd_toStartOf="@+id/color3"
+        app:layout_constraintStart_toEndOf="@+id/color1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/color3"
+        android:layout_width="@dimen/color_picker_swatch_size"
+        android:layout_height="@dimen/color_picker_swatch_size"
+        android:layout_margin="@dimen/color_picker_swatch_spacing"
+        android:contentDescription="@null"
+        android:src="@drawable/color_item_swatch_background"
+        app:layout_constraintBottom_toTopOf="@+id/color6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/color2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/color4"
+        android:layout_width="@dimen/color_picker_swatch_size"
+        android:layout_height="@dimen/color_picker_swatch_size"
+        android:layout_margin="@dimen/color_picker_swatch_spacing"
+        android:contentDescription="@null"
+        android:src="@drawable/color_item_swatch_background"
+        app:layout_constraintBottom_toTopOf="@+id/color7"
+        app:layout_constraintEnd_toStartOf="@+id/color5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/color1" />
+
+    <ImageView
+        android:id="@+id/color5"
+        android:layout_width="@dimen/color_picker_swatch_size"
+        android:layout_height="@dimen/color_picker_swatch_size"
+        android:layout_margin="@dimen/color_picker_swatch_spacing"
+        android:contentDescription="@null"
+        android:src="@drawable/color_item_swatch_background"
+        app:layout_constraintBottom_toTopOf="@+id/color8"
+        app:layout_constraintEnd_toStartOf="@+id/color6"
+        app:layout_constraintStart_toEndOf="@+id/color4"
+        app:layout_constraintTop_toBottomOf="@+id/color2" />
+
+    <ImageView
+        android:id="@+id/color6"
+        android:layout_width="@dimen/color_picker_swatch_size"
+        android:layout_height="@dimen/color_picker_swatch_size"
+        android:layout_margin="@dimen/color_picker_swatch_spacing"
+        android:contentDescription="@null"
+        android:src="@drawable/color_item_swatch_background"
+        app:layout_constraintBottom_toTopOf="@+id/color9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/color5"
+        app:layout_constraintTop_toBottomOf="@+id/color3" />
+
+    <ImageView
+        android:id="@+id/color7"
+        android:layout_width="@dimen/color_picker_swatch_size"
+        android:layout_height="@dimen/color_picker_swatch_size"
+        android:layout_margin="@dimen/color_picker_swatch_spacing"
+        android:contentDescription="@null"
+        android:src="@drawable/color_item_swatch_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/color8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/color4" />
+
+    <ImageView
+        android:id="@+id/color8"
+        android:layout_width="@dimen/color_picker_swatch_size"
+        android:layout_height="@dimen/color_picker_swatch_size"
+        android:layout_margin="@dimen/color_picker_swatch_spacing"
+        android:contentDescription="@null"
+        android:src="@drawable/color_item_swatch_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/color9"
+        app:layout_constraintStart_toEndOf="@+id/color7"
+        app:layout_constraintTop_toBottomOf="@+id/color5" />
+
+    <ImageView
+        android:id="@+id/color9"
+        android:layout_width="@dimen/color_picker_swatch_size"
+        android:layout_height="@dimen/color_picker_swatch_size"
+        android:layout_margin="@dimen/color_picker_swatch_spacing"
+        android:contentDescription="@null"
+        android:src="@drawable/color_item_swatch_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/color8"
+        app:layout_constraintTop_toBottomOf="@+id/color6" />
+</androidx.constraintlayout.widget.ConstraintLayout>
