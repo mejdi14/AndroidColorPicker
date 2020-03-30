@@ -2,6 +2,7 @@ package asm.asmtunis.com.androidcolorpicker
 
 import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,6 +32,8 @@ class ColorsFragment(position: Int) : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view= inflater.inflate(R.layout.fragment_colors, container, false)
+
+        Log.d("message","here we are")
 
         initialiseColorHolders(view)
         var fragmentColorsList= getColorsFromPosition(position!!)
