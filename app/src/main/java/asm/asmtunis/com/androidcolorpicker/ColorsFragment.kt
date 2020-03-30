@@ -4,11 +4,13 @@ import android.annotation.SuppressLint
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import asm.asmtunis.com.androidcolorpicker.data.getColors
 import kotlinx.android.synthetic.main.fragment_colors.*
 
 
@@ -36,18 +38,32 @@ class ColorsFragment(position: Int) : Fragment() {
 
         initialiseColorHolders(view)
 
+        var colorsList= getColors()
+        var newList=colorsList.chunked(9)
+        for (item in newList)
+            Log.d("item", item.toString())
+
         ChangeColor()
 
         return view
     }
 
     private fun ChangeColor() {
+        val colorDrawable: GradientDrawable = creatingTheRoundShape()
+        changingTheShapeColor(colorDrawable)
+        color1.setImageDrawable(colorDrawable)
+    }
+
+    private fun changingTheShapeColor(colorDrawable: GradientDrawable) {
+        var color = "#ff8a80"
+        colorDrawable.setColor(Color.parseColor(color))
+    }
+
+    private fun creatingTheRoundShape(): GradientDrawable {
         val colorDrawable: GradientDrawable
         colorDrawable = GradientDrawable()
         colorDrawable.shape = GradientDrawable.OVAL
-        var color= "#ff8a80"
-        colorDrawable.setColor(Color.parseColor(color))
-        color1.setImageDrawable(colorDrawable)
+        return colorDrawable
     }
 
     private fun initialiseColorHolders(view: View) {
