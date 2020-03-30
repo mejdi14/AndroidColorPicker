@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
     private fun initPager() {
         val pagerAdapter = ScreenSlidePagerAdapter(this)
         pager.adapter = pagerAdapter
+        indicator.setViewPager(pager)
     }
 
 

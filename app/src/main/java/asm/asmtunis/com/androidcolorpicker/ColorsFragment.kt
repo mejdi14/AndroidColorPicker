@@ -1,18 +1,13 @@
 package asm.asmtunis.com.androidcolorpicker
 
-import android.annotation.SuppressLint
-import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
-import asm.asmtunis.com.androidcolorpicker.data.getColors
 import asm.asmtunis.com.androidcolorpicker.data.getColorsFromPosition
-import kotlinx.android.synthetic.main.fragment_colors.*
 
 
 /**
@@ -39,29 +34,42 @@ class ColorsFragment(position: Int) : Fragment() {
 
         initialiseColorHolders(view)
         var fragmentColorsList= getColorsFromPosition(position!!)
-        Log.d("innerList", fragmentColorsList.toString())
 
-       /* var colorsList= getColors()
-        var newList=colorsList.chunked(9)
-        for (item in newList)
-            for (innerItem in item)*/
-
-
-
-        ChangeColor()
+        ChangeColor(fragmentColorsList)
 
         return view
     }
 
-    private fun ChangeColor() {
+    private fun ChangeColor(fragmentColorsList: ArrayList<Int>) {
         val colorDrawable: GradientDrawable = creatingTheRoundShape()
-        changingTheShapeColor(colorDrawable)
-        color1.setImageDrawable(colorDrawable)
+        changingTheShapeColor(colorDrawable,fragmentColorsList.get(0),color1)
+        if (fragmentColorsList.size>1)
+        changingTheShapeColor(colorDrawable, fragmentColorsList.get(1), color2)
+        if (fragmentColorsList.size>2)
+        changingTheShapeColor(colorDrawable, fragmentColorsList.get(2), color3)
+        if (fragmentColorsList.size>3)
+        changingTheShapeColor(colorDrawable, fragmentColorsList.get(3), color4)
+        if (fragmentColorsList.size>4)
+        changingTheShapeColor(colorDrawable, fragmentColorsList.get(4), color5)
+        if (fragmentColorsList.size>5)
+        changingTheShapeColor(colorDrawable, fragmentColorsList.get(5), color6)
+        if (fragmentColorsList.size>6)
+        changingTheShapeColor(colorDrawable, fragmentColorsList.get(6), color7)
+        if (fragmentColorsList.size>7)
+        changingTheShapeColor(colorDrawable, fragmentColorsList.get(7), color8)
+        if (fragmentColorsList.size>8)
+        changingTheShapeColor(colorDrawable, fragmentColorsList.get(8), color9)
+
+
     }
 
-    private fun changingTheShapeColor(colorDrawable: GradientDrawable) {
-        var color = "#ff8a80"
-        colorDrawable.setColor(Color.parseColor(color))
+    private fun changingTheShapeColor(
+        colorDrawable: GradientDrawable,
+        color: Int,
+        holder: ImageView
+    ) {
+        colorDrawable.setColor(color)
+        holder.setImageDrawable(colorDrawable)
     }
 
     private fun creatingTheRoundShape(): GradientDrawable {
