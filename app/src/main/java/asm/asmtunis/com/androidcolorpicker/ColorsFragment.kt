@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import asm.asmtunis.com.androidcolorpicker.data.getColors
+import asm.asmtunis.com.androidcolorpicker.data.getColorsFromPosition
 import kotlinx.android.synthetic.main.fragment_colors.*
 
 
@@ -37,11 +38,15 @@ class ColorsFragment(position: Int) : Fragment() {
         val view= inflater.inflate(R.layout.fragment_colors, container, false)
 
         initialiseColorHolders(view)
+        var fragmentColorsList= getColorsFromPosition(position!!)
+        Log.d("innerList", fragmentColorsList.toString())
 
-        var colorsList= getColors()
+       /* var colorsList= getColors()
         var newList=colorsList.chunked(9)
         for (item in newList)
-            Log.d("item", item.toString())
+            for (innerItem in item)*/
+
+
 
         ChangeColor()
 

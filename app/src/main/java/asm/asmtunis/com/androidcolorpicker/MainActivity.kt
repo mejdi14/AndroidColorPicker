@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import asm.asmtunis.com.androidcolorpicker.data.getColorsPagesNumber
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -33,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private inner class ScreenSlidePagerAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
-        override fun getItemCount(): Int = 3
+        override fun getItemCount(): Int = getColorsPagesNumber()
 
         override fun createFragment(position: Int): Fragment {
             return ColorsFragment(position)
