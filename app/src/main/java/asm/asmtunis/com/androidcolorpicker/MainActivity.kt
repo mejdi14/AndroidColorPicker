@@ -1,14 +1,15 @@
 package asm.asmtunis.com.androidcolorpicker
 
 import android.content.Context
-import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import asm.asmtunis.com.androidcolorpicker.data.dialog.ColorsDialog
 import asm.asmtunis.com.androidcolorpicker.data.getColorsPagesNumber
+import asm.asmtunis.com.androidcolorpicker.fragment.ColorsFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -25,7 +26,12 @@ class MainActivity : AppCompatActivity() {
         initPager()
 
         var colorsDialog=ColorsDialog(this)
-        colorsDialog.show()
+
+        colorsDialog.withBlackTheme()
+            .setColorListener { color1, color2 ->
+                Log.d("colors",color1.toString())
+            }
+            .show()
 
     }
 
@@ -43,7 +49,9 @@ class MainActivity : AppCompatActivity() {
         override fun getItemCount(): Int = getColorsPagesNumber()
 
         override fun createFragment(position: Int): Fragment {
-            return ColorsFragment(position)
+            return ColorsFragment(
+                position
+            )
             }
         }
 }

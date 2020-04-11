@@ -1,5 +1,5 @@
     <shape xmlns:android="http://schemas.android.com/apk/res/android"
         android:shape="oval">
         <solid
-            android:color="@color/quantum_black_100"/>
+            android:color="@color/quantum_grey600"/>
     </shape>
