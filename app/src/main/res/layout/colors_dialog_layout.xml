@@ -22,15 +22,25 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <me.relex.circleindicator.CircleIndicator3
-        android:id="@+id/indicator"
+        android:id="@+id/default_indicator"
         android:layout_width="match_parent"
         android:layout_height="38dp"
-        android:outlineAmbientShadowColor="@color/quantum_black_100"
-        android:outlineSpotShadowColor="@color/quantum_black_100"
         app:layout_constraintTop_toBottomOf="@id/pager"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:ci_drawable="@drawable/selected_dots_color"
+        app:ci_drawable_unselected="@drawable/unselected_dots_color"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <me.relex.circleindicator.CircleIndicator3
+        android:id="@+id/white_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/pager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:ci_drawable="@drawable/white_selected_dots_color"
         app:ci_drawable_unselected="@drawable/unselected_dots_color"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
