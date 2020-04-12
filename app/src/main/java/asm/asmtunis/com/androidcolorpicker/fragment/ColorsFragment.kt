@@ -8,15 +8,20 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
+import asm.asmtunis.com.androidcolorpicker.MainActivity
 import asm.asmtunis.com.androidcolorpicker.R
 import asm.asmtunis.com.androidcolorpicker.data.getColorsFromPosition
 import asm.asmtunis.com.androidcolorpicker.listener.ColorListener
+import asm.asmtunis.com.androidcolorpicker.viewmodel.ColorViewModel
+import kotlin.random.Random
 
 /**
  * A simple [Fragment] subclass.
  */
 class ColorsFragment(position: Int) : Fragment() {
-    var position: Int? = position
     lateinit var color1: ImageView
     lateinit var color2: ImageView
     lateinit var color3: ImageView
@@ -26,15 +31,15 @@ class ColorsFragment(position: Int) : Fragment() {
     lateinit var color7: ImageView
     lateinit var color8: ImageView
     lateinit var color9: ImageView
+
     lateinit var fragmentColorsList: ArrayList<Int>
+    private lateinit  var viewModel: ColorViewModel
     var listener: (()->Unit)? = null
 
-   /* fun setOnHeadlineSelectedListener(callback: OnHeadlineSelectedListener) {
-        this.callback = callback
-    }*/
+    var position: Int? = position
+
     var colorListener: ColorListener? = null
 
-   // internal var callback: colorListener
 
     var colorsHashMap: HashMap<Int, Int?> = HashMap<Int, Int?>()
 
@@ -48,13 +53,14 @@ class ColorsFragment(position: Int) : Fragment() {
         ChangeColor(fragmentColorsList)
         linkColorsWithView()
 
-
-
+        viewModel = ViewModelProvider(activity as MainActivity).get(ColorViewModel::class.java)
         color1.setOnClickListener{
-          //  colorListener?.onColorSelected(5, "hhh")
-            Log.d("listener","hello")
-            listener?.invoke()
+            viewModel.currentColor.setValue(colorsHashMap.get(color1.id).toString())
         }
+        color2.setOnClickListener{
+            viewModel.currentColor.setValue(colorsHashMap.get(color2.id).toString())
+        }
+
 
         return view
     }
@@ -126,8 +132,5 @@ class ColorsFragment(position: Int) : Fragment() {
         color9 = view.findViewById(R.id.color9)
     }
 
-    interface OnHeadlineSelectedListener {
-        fun onArticleSelected(position: Int)
-    }
 
 }

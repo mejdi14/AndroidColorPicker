@@ -1,26 +1,33 @@
 package asm.asmtunis.com.androidcolorpicker.data.dialog
 
+import android.app.Activity
 import android.app.Dialog
 import android.content.Context
 import android.graphics.drawable.ColorDrawable
+import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.Window
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import androidx.lifecycle.*
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import asm.asmtunis.com.androidcolorpicker.MainActivity
 import asm.asmtunis.com.androidcolorpicker.R
 import asm.asmtunis.com.androidcolorpicker.data.getColorsPagesNumber
 import asm.asmtunis.com.androidcolorpicker.fragment.ColorsFragment
 import asm.asmtunis.com.androidcolorpicker.listener.ColorListener
+import asm.asmtunis.com.androidcolorpicker.viewmodel.ColorViewModel
 import kotlinx.android.synthetic.main.colors_dialog_layout.*
+import java.security.acl.Owner
 
 
 class ColorsDialog(context: Context) : Dialog(context) {
     var colorListener: ColorListener? = null
     var mainFrame: ConstraintLayout
     var myContext: Context = context
+    private  var viewModel: ColorViewModel
 
     init {
         setCancelable(true)
@@ -35,8 +42,16 @@ class ColorsDialog(context: Context) : Dialog(context) {
         )
         initPager()
         mainFrame.setOnClickListener{
-            colorListener?.onColorSelected(1, "hello")
+           // colorListener?.onColorSelected(1, "hello")
         }
+
+        viewModel = ViewModelProvider(myContext as MainActivity).get(ColorViewModel::class.java)
+
+
+        viewModel.currentColor.observe(myContext as MainActivity , Observer<String> { item ->
+            colorListener?.onColorSelected(1, item)
+        })
+
     }
 
     private fun initPager() {
@@ -59,11 +74,7 @@ class ColorsDialog(context: Context) : Dialog(context) {
         }
     }
 
-
-
-
-
-    fun setColorListener(listener: (Int, String) -> Unit): ColorsDialog {
+    fun setColorListener(listener: (color: Int, colorHex: String) -> Unit): ColorsDialog {
         this.colorListener = object : ColorListener {
             override fun onColorSelected(color: Int, colorHex: String) {
                 listener(color, colorHex)

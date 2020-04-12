@@ -28,8 +28,11 @@ class MainActivity : AppCompatActivity() {
         var colorsDialog=ColorsDialog(this)
 
         colorsDialog.withBlackTheme()
+            .setColorListener { color, colorHex ->
+
+            }
             .setColorListener { color1, color2 ->
-                Log.d("colors",color1.toString())
+                Log.d("colors",color2)
             }
             .show()
 
