@@ -4,6 +4,7 @@ import android.app.Activity
 import android.app.Dialog
 import android.content.Context
 import android.graphics.drawable.ColorDrawable
+import android.opengl.Visibility
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -57,12 +58,19 @@ class ColorsDialog(context: Context) : Dialog(context) {
     private fun initPager() {
         val pagerAdapter = ScreenSlidePagerAdapter(myContext as FragmentActivity)
         pager.adapter = pagerAdapter
-        indicator.setViewPager(pager)
+        default_indicator.setViewPager(pager)
+        white_indicator.setViewPager(pager)
     }
 
     fun withBlackTheme(): ColorsDialog {
         mainFrame.setBackgroundResource(R.drawable.dialog_night_shape)
+        switchToTheWhiteIndicator()
         return this
+    }
+
+    private fun switchToTheWhiteIndicator() {
+        default_indicator.visibility=View.INVISIBLE
+        white_indicator.visibility=View.VISIBLE
     }
 
     private inner class ScreenSlidePagerAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
