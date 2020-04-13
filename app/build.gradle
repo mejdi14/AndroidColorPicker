@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "asm.asmtunis.com.androidcolorpicker"
-        minSdkVersion 21
+        minSdkVersion 15
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"

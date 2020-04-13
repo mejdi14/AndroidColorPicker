@@ -7,11 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import asm.asmtunis.com.androidcolorpicker.data.dialog.ColorsDialog
+import asm.asmtunis.com.androidcolorpicker.data.ColorsObject
+import asm.asmtunis.com.androidcolorpicker.dialog.ColorsDialog
 import asm.asmtunis.com.androidcolorpicker.data.getColorsPagesNumber
 import asm.asmtunis.com.androidcolorpicker.fragment.ColorsFragment
 import kotlinx.android.synthetic.main.activity_main.*
-
 
 
 class MainActivity : AppCompatActivity() {
@@ -25,14 +25,10 @@ class MainActivity : AppCompatActivity() {
 
         initPager()
 
-        var colorsDialog=ColorsDialog(this)
-
-        colorsDialog.withBlackTheme()
+        ColorsDialog(this)
+            .withBlackTheme()
             .setColorListener { color, colorHex ->
-
-            }
-            .setColorListener { color1, color2 ->
-                Log.d("colors",color2)
+                Log.d("clicked", colorHex)
             }
             .show()
 
@@ -44,10 +40,6 @@ class MainActivity : AppCompatActivity() {
         indicator.setViewPager(pager)
     }
 
-
-
-
-
     private inner class ScreenSlidePagerAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
         override fun getItemCount(): Int = getColorsPagesNumber()
 
@@ -55,6 +47,6 @@ class MainActivity : AppCompatActivity() {
             return ColorsFragment(
                 position
             )
-            }
         }
+    }
 }

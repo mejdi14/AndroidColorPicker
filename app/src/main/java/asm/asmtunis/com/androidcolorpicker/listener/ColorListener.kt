@@ -1,14 +1,7 @@
 package asm.asmtunis.com.androidcolorpicker.listener
 
-/**
- * Color Select Listener
- *
- * @author Dhaval Patel
- * @version 1.0
- * @since 23 Dec 2019
- */
-interface ColorListener {
 
+interface ColorListener {
     /**
      *
      * Call when user select color
