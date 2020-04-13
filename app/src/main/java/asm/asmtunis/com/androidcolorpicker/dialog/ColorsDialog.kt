@@ -1,11 +1,7 @@
-package asm.asmtunis.com.androidcolorpicker.data.dialog
+package asm.asmtunis.com.androidcolorpicker.dialog
 
-import android.app.Activity
 import android.app.Dialog
 import android.content.Context
-import android.graphics.drawable.ColorDrawable
-import android.opengl.Visibility
-import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.Window
@@ -16,12 +12,13 @@ import androidx.lifecycle.*
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import asm.asmtunis.com.androidcolorpicker.MainActivity
 import asm.asmtunis.com.androidcolorpicker.R
+import asm.asmtunis.com.androidcolorpicker.data.ColorsObject
 import asm.asmtunis.com.androidcolorpicker.data.getColorsPagesNumber
+import asm.asmtunis.com.androidcolorpicker.data.initColors
 import asm.asmtunis.com.androidcolorpicker.fragment.ColorsFragment
 import asm.asmtunis.com.androidcolorpicker.listener.ColorListener
 import asm.asmtunis.com.androidcolorpicker.viewmodel.ColorViewModel
 import kotlinx.android.synthetic.main.colors_dialog_layout.*
-import java.security.acl.Owner
 
 
 class ColorsDialog(context: Context) : Dialog(context) {
@@ -45,6 +42,14 @@ class ColorsDialog(context: Context) : Dialog(context) {
         mainFrame.setOnClickListener{
            // colorListener?.onColorSelected(1, "hello")
         }
+        initColors()
+        var list= ArrayList<Int>()
+        list.add(5)
+        list.add(3)
+        ColorsObject.arrayList.addAll(0,list)
+        Log.d("object1",ColorsObject.arrayList.get(0).toString())
+        Log.d("object2",ColorsObject.arrayList.get(1).toString())
+        Log.d("object3",ColorsObject.arrayList.get(2).toString())
 
         viewModel = ViewModelProvider(myContext as MainActivity).get(ColorViewModel::class.java)
 
