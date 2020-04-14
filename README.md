@@ -1,6 +1,10 @@
 <h1 align="center">Welcome to AndroidColorPicker Library 👋</h1>
 <p align="center">
-
+  <a href="https://github.com/frinyvonnick/gitmoji-changelog">
+    <img src="https://img.shields.io/badge/API-15%2B-blue.svg?style=flat" alt="gitmoji-changelog">
+  </a>  <a href="https://github.com/frinyvonnick/gitmoji-changelog">
+    <img src="https://jitpack.io/v/mejdi14/AndroidColorPicker.svg" alt="gitmoji-changelog">
+  </a>
   </a>
 	<a href="https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE">
     <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow.svg" target="_blank" />
@@ -8,9 +12,7 @@
   <a href="https://codecov.io/gh/kefranabg/readme-md-generator">
     <img src="https://codecov.io/gh/kefranabg/readme-md-generator/branch/master/graph/badge.svg" />
   </a>
-  <a href="https://github.com/frinyvonnick/gitmoji-changelog">
-    <img src="https://img.shields.io/badge/API-15%2B-blue.svg?style=flat" alt="gitmoji-changelog">
-  </a>
+
  
  
 </p>
