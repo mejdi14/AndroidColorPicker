@@ -1,8 +1,4 @@
 <h1 align="center">Welcome to AndroidColorPicker Library 👋</h1>
-## Other
-[![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
-[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
-[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)  
 <p align="center">
 
   </a>
@@ -32,12 +28,7 @@
 	</p>
 	
 	
-## Technologies
-- kotlin
-- ViewPager2
-- Git Flow (with GitKraken)
-- ArgbEvaluator
-- Github Actions
+
 	
 ## 🤝 Contributing
 
@@ -49,7 +40,7 @@ Feel free to check [issues page] if you want to contribute.<br />
 
 👤 **Mejdi Hafiane**
 
-- FaceBook: [@MejdiHafiane](https://www.facebook.com/mejdi.marshall)
+- profile: [@MejdiHafiane](https://mejdi14.github.io/mejdi/#/about)
 
 ## Show your support
 
