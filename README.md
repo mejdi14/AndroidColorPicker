@@ -24,7 +24,7 @@
 
 ## ✨ Demo
 <p align="center">
-<img src="https://github.com/mejdi14/BooksSwipe/blob/master/images/preview.gif" height="400" width="550" >
+<img src="https://github.com/mejdi14/AndroidColorPicker/blob/master/images/original.gif" height="400" width="550" >
 	</p>
 	
 	
