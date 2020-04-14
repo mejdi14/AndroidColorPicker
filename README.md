@@ -90,7 +90,7 @@ Add new colors
 ``` java
  .addColors(colorsList,ColorsPosition.START)
 ```
-where colorsList is an ArrayList<Int> (every Int represent a color)
+where colorsList is an ArrayList<Int> (every Int represent a color)</br>
 ColorsPosition is where your colors should be in the final list of colors (Start or End)
 	
 Use your own colors
@@ -99,7 +99,7 @@ Use your own colors
 ``` java
  .withMyOwnColors(colorsList)
 ```
-where colorsList is an ArrayList<Int> (every Int represent a color)
+where colorsList is an ArrayList<Int> (every Int represent a color)</br>
 this will make the library ignore the default colors and use only your colors from colorList	
 
 
