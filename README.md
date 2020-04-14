@@ -19,8 +19,6 @@
 <img src="https://github.com/mejdi14/AndroidColorPicker/blob/master/images/logo.png" height="300" width="300" >
 	</p>
 	
-## :art:Credits
-- Many thanks to : [@Marta Skowron](https://dribbble.com/skowrony) for the amazing design
 
 ## ✨ Demo
 <p align="center">
@@ -84,13 +82,25 @@ Dark Mode
 <img src="https://github.com/mejdi14/AndroidColorPicker/blob/master/images/dark4.png" alt="sample" title="sample" width="320" height="350" align="right" vspace="52" />
 
 ``` java
-    MHColorsDialog(this)
-                .setColorListener { color, colorHex ->
-                    // color and colorHex are the chosen color
-                }
-                .show()
+ .withDarkMode()
 ```
+Add new colors
+-----
 
+``` java
+ .addColors(colorsList,ColorsPosition.START)
+```
+where colorsList is an ArrayList<Int> (every Int represent a color)
+ColorsPosition is where your colors should be in the final list of colors (Start or End)
+	
+Use your own colors
+-----
+
+``` java
+ .withMyOwnColors(colorsList)
+```
+where colorsList is an ArrayList<Int> (every Int represent a color)
+this will make the library ignore the default colors and use only your colors from colorList	
 
 
 
