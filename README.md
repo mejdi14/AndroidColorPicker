@@ -48,7 +48,7 @@ Add this to your module's `build.gradle` file (make sure the version matches the
 ```gradle
 dependencies {
 	...
-	implementation 'com.github.mejdi14:Flat-Dialog-Android:1.0.4'
+	implementation 'com.github.mejdi14:AndroidColorPicker:1.0.2'
 }
 ```
 ## 🤝 Contributing
