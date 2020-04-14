@@ -81,7 +81,7 @@ dependencies {
 
 Dark Mode
 -----
-<img src="https://github.com/mejdi14/AndroidColorPicker/blob/master/images/dark4.png" alt="sample" title="sample" width="280" height="350" align="right" vspace="52" />
+<img src="https://github.com/mejdi14/AndroidColorPicker/blob/master/images/dark4.png" alt="sample" title="sample" width="320" height="350" align="right" vspace="52" />
 
 ``` java
     MHColorsDialog(this)
