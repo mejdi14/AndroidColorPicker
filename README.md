@@ -79,6 +79,22 @@ dependencies {
 
 ## :art:Customization
 
+Dark Mode
+-----
+<img src="https://github.com/mejdi14/AndroidColorPicker/blob/master/images/dark4.png" alt="sample" title="sample" width="280" height="450" align="right" vspace="52" />
+
+``` java
+    MHColorsDialog(this)
+                .setColorListener { color, colorHex ->
+                    // color and colorHex are the chosen color
+                }
+                .show()
+```
+
+
+
+
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome.<br />
