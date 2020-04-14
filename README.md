@@ -51,6 +51,34 @@ dependencies {
 	implementation 'com.github.mejdi14:AndroidColorPicker:1.0.2'
 }
 ```
+
+
+## :tools:How to use with kotlin
+
+``` java
+    MHColorsDialog(this)
+                .setColorListener { color, colorHex ->
+                    // color and colorHex are the chosen color
+                }
+                .show()
+```
+
+## :coffee:How to use with Java
+
+``` java
+  MHColorsDialog mhColorsDialog=new MHColorsDialog(MainActivity.this);
+                mhColorsDialog.setColorListener(new ColorListener() {
+                    @Override
+                    public void onColorSelected(int color, @NotNull String colorHex) {
+                          // color and colorHex are the chosen color
+                    }
+                });
+                mhColorsDialog.show();
+```
+
+
+## :art:Customization
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome.<br />
