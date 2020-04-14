@@ -1,7 +1,8 @@
 <h1 align="center">Welcome to AndroidColorPicker Library 👋</h1>
 <p align="center">
 
- <a href="https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE">
+  </a>
+	<a href="https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE">
     <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow.svg" target="_blank" />
   </a>
   <a href="https://codecov.io/gh/kefranabg/readme-md-generator">
@@ -15,7 +16,7 @@
 </p>
 
 <p align="center">
-<img src="https://github.com/mejdi14/BooksSwipe/blob/master/images/books.png" height="300" width="300" >
+<img src="https://github.com/mejdi14/AndroidColorPicker/blob/master/images/logo.png" height="300" width="300" >
 	</p>
 	
 ## :art:Credits
@@ -27,12 +28,7 @@
 	</p>
 	
 	
-## Technologies
-- kotlin
-- ViewPager2
-- Git Flow (with GitKraken)
-- ArgbEvaluator
-- Github Actions
+
 	
 ## 🤝 Contributing
 
@@ -44,7 +40,7 @@ Feel free to check [issues page] if you want to contribute.<br />
 
 👤 **Mejdi Hafiane**
 
-- FaceBook: [@MejdiHafiane](https://www.facebook.com/mejdi.marshall)
+- profile: [@MejdiHafiane](https://mejdi14.github.io/mejdi/#/about)
 
 ## Show your support
 
