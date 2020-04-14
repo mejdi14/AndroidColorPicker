@@ -100,7 +100,7 @@ Use your own colors
  .withMyOwnColors(colorsList)
 ```
 where colorsList is an ArrayList<Int> (every Int represent a color)</br>
-this will make the library ignore the default colors and use only your colors from colorList	
+this will make the library ignore the default colors and use only your colors from colorsList	
 
 
 
