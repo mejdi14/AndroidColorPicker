@@ -20,12 +20,10 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
 
          /*   var arrayList = ArrayList<Int>()
-            //yellow colors
             arrayList.add(Color.parseColor("#8bc34a"))
             arrayList.add(Color.parseColor("#8bc34a"))
             arrayList.add(Color.parseColor("#8bc34a"))*/
             MHColorsDialog(this)
-                .withDarkMode()
                 .setColorListener { color, colorHex ->
                     Log.d("hex", colorHex)
                     Log.d("int", color.toString())
