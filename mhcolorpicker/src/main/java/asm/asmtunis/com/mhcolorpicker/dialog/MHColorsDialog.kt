@@ -78,7 +78,7 @@ class MHColorsDialog(context: Context) : Dialog(context) {
         white_indicator.setViewPager(pager)
     }
 
-    fun withBlackTheme(): MHColorsDialog {
+    fun withDarkMode(): MHColorsDialog {
         mainFrame.setBackgroundResource(R.drawable.dialog_night_shape)
         switchToTheWhiteIndicator()
         return this
