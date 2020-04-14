@@ -41,7 +41,7 @@ allprojects {
 	}
 }
 ``` 
-## :box:Dependency
+## :hammer:Dependency
 
 Add this to your module's `build.gradle` file (make sure the version matches the JitPack badge above):
 
@@ -53,7 +53,7 @@ dependencies {
 ```
 
 
-## :tool:How to use with kotlin
+## :fire:How to use with kotlin
 
 ``` java
     MHColorsDialog(this)
