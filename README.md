@@ -9,8 +9,9 @@
     <img src="https://codecov.io/gh/kefranabg/readme-md-generator/branch/master/graph/badge.svg" />
   </a>
   <a href="https://github.com/frinyvonnick/gitmoji-changelog">
-    <img src="https://img.shields.io/badge/changelog-gitmoji-brightgreen.svg" alt="gitmoji-changelog">
+    <img src="https://img.shields.io/badge/API-21%2B-blue.svg?style=flat" alt="gitmoji-changelog">
   </a>
+ (https://img.shields.io/badge/API-21%2B-blue.svg?style=flat)
  
  
 </p>
