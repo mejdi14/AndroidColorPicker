@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-<img src="https://github.com/mejdi14/BooksSwipe/blob/master/images/books.png" height="300" width="300" >
+<img src="https://github.com/mejdi14/BooksSwipe/blob/master/images/logo.png" height="300" width="300" >
 	</p>
 	
 ## :art:Credits
