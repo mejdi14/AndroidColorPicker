@@ -25,7 +25,6 @@
 <img src="https://github.com/mejdi14/AndroidColorPicker/blob/master/images/original.gif" height="400" width="550" >
 	</p>
 	
-	
 
 ## Installation
 
