@@ -12,7 +12,6 @@
   <a href="https://codecov.io/gh/kefranabg/readme-md-generator">
     <img src="https://codecov.io/gh/kefranabg/readme-md-generator/branch/master/graph/badge.svg" />
   </a>
-
 </p>
 
 <p align="center">
